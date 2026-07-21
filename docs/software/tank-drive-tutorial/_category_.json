@@ -1,0 +1,8 @@
+{
+  "label": "Tank Drive Tutorial",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Tutorial on creating a tank drive with NEO and TalonFX Motors. This is the first tutorial I would recommend to beginners, as it is the most introductory topics of FRC Java programming. This tutorial will be very in depth and long, but it's designed for people with zero background in FRC coding or FRC in general."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Software",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Collection of software tutorials and teachings. The order on the left is sorted from least complicated (top) to most complicated (bottom). You can follow from top to the bottom and it works as essentially a full FRC tutorial."
+  }
+}

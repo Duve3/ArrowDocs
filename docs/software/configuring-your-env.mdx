@@ -1,0 +1,78 @@
+---
+sidebar_position: 2
+title: Configuring your Environment
+---
+
+# Configuring your environment
+
+This is the first step of learning Software is to download the necessary tools!
+
+## Downloading WPILib
+
+Follow this link from the FRC Documentation: [https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html)\
+^ This link will explain all the necessary steps for your OS when installing WPILib
+
+You want to install `Everything` for ideally `all Users`, but permissions may make it so you have to install for `this User`
+<span className="subtext">note: `Install for all Users` is not available for macOS and Linux</span>
+
+Only select `Download for this computer only (fastest)` as the other options are not viable.
+
+Once we are done installing all of this, we will now have a new version of VSCode, on windows this is labelled as "\<year number\> WPILib VS Code", on macOS is it just labelled as VSCode <span className="subtext">(sorry mac users! It's just a gamble on which one you open!)</span>
+
+:::note
+You are able to use [IntelliJ IDEA](https://www.jetbrains.com/idea/) and other IDE's for coding (personally I use them) but you will still need the WPILib version of VSCode for deploying, simulating, and other tasks
+<span className="subtext">teams like 1778 have gotten IDEA working completely alone from WPILib VSCode, but we have not been able to replicated this, no part of this documentation will support/help IDEA developers</span>
+:::
+
+The installer also installed a bunch of other tools, the key ones I want to highlight for now are:
+- Elastic, a dashboard that we use at competition for live match updates and data
+- AdvantageScope, used along with AdvantageKit (or normal robots), allows for replaying and analyzing match data and seeing what went wrong
+
+:::note
+
+For now we will not talk about the FRC Game Tools and Driverstation, instead look at [FRC Game Tools](software/frc-game-tools)
+
+:::
+
+Now we got WPILib installed, lets go and learn what GitHub is!
+
+## What is GitHub?????
+
+Git is a tool created by the legendary developer Linus Torvalds - the same guy who made Linux. It is a `version control system` meaning it helps you manage versioning within your code.
+
+Lets explain it better by imagining something... Imagine it is the day before your district competition, you doing well makes or breaks whether you go to Worlds this year, and you change a small part of the code to be "more clean",
+but now the whole robot doesn't work, it's one AM and nobody understand what the code was before. Now if you had Git set up, this would never be an issue! You would've commited the code from earlier and been able to run a simple command and rollback to it.
+
+Now don't get it confused:
+- Git is the actual verison control system
+- GitHub is a website that allows for you to upload your repositories (aka your codebase) for anyone to clone and work with you on
+
+### Installing Git
+
+:::note
+
+This is not a full tutorial of Git, Github, or version control; this is just what we do at ArrowDynamics. I highly recommend you keep learning more about these systems as they are crucial in Software Development - not just FRC.
+
+:::
+
+Now to make your life much easier, we will work on installing GitHub Desktop, a tool made by GitHub to allow to use Git from a graphical interface, instead of having to go into the terminal and type complex and confusing commands.
+
+Install from here: [https://desktop.github.com/download/](https://desktop.github.com/download/)
+
+Follow the set up steps as necessary
+
+Now throughout this tutorial we will go more in depth on Github usage, but heres a quick summary (it's okay if this doesn't make full sense yet! As you do each of the tutorials, each part will be explained in more depth!):
+- A repositority is a bunch of code (each project will have its own repo)
+- A branch is a different version of the code that is not tested/is WIP
+- Main/Master is the branch that working, running code will always exist (Main should **ALWAYS** be good, even if it's one or two features behind)
+- A commit is you signing off on your current changes and putting a message along with it (you should always commit before you leave)
+- "pulling" is to pull from Github.com and to update your local code from git
+- "pushing" is to push your code to github.com (you need to do this for other people to see your code)
+- "merge conflict" is when two versions of the code exist (like if the version on github.com and your local changes conflict with eachother), so you need to figure out what parts to keep and what parts to remove
+- All new code go onto branches which follow the naming strategy of: "feature/_" for features and "fix/_" for bugs
+- A "pull request" (or PR) is what you do once your branch has been tested and works, it is requesting that your branch be merged into the main branch (aka the main robot code)
+- "Code review" is the process in which peers and mentors of the team review your PR and verify that it is good, working code, before either approving it to be merged, or requesting changes before merging it.
+
+Obviously this a non-exhaustive list of vocabulary, and these definitions aren't complete, but it's a good starter.
+
+All of these terms will come up again as you go through each tutorial, and will be explained in much higher depth.

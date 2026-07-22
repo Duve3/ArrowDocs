@@ -51,3 +51,49 @@ Finally, we turn on `Enable Desktop Support`. This allows us to simulate the rob
 
 And once you press `Generate Project` you will have officially made your first WPILib project!!
 
+## Let's Look At What We Generated!
+
+You should have a folder directory that looks like this:
+<img src={require("./img/TankBotDirectoryUponCreation.png").default} style={{width: 20 + "rem"}}/>
+
+This is a lot of files! So let's break down what each file/directory does!
+
+### Simple Things
+`WPILib-License.md` is just the license for using WPILib\
+`.gitignore` is a file used by Git to understand what files can be ignored\
+`.wpilib/wpilib_preferences.json` is the file used for storing your project's configuration\
+`.vscode/` is the directory that contains a bunch of VSCode configuration\
+`build/` contains the artifacts after building, you don't need to interact to this most of the time!
+
+### Gradle
+When writing code, you need some kind of compiler or build system. Most Java programs use *Gradle*.
+
+Gradle's job is to look at the build.gradle and the settings.gradle file, then based off of those, compile your Java code!
+<span className="subtext">Don't worry, you don't have to deal with Gradle most of the time! (WPILib handles most of it for you!)</span>
+
+Gradle is a more complicated topic, but it will be explained as we go and interact with their files.
+Speaking of their files!
+The following items are related to Gradle:
+- `gradlew` & `gradlew.bat` are the actual gradle executable
+- `settings.gradle` handles some settings for WPILib, mainly looking for your WPILib install!
+- `build.gradle` is the main file, it configures most of the build process, don't worry we won't touch this file for a while!
+- `.gradle/` is a directory that contains everything gradle generated as it ran, you can completely ignore this directory
+- `gradle/` contains gradle_wrapper, its a jar file that handles gradle itself by wrapping around it and giving a better interface to users
+
+:::note
+
+You will NOT have to interact with gradle that often! This is just an explaination so you understand the *why* behind each generated file!
+
+:::
+
+### Source Files
+All code will be located in the `src/` directory. Inside you'll find `main/` (VSCode often compresses these as there's only one folder inside of src)
+
+Inside of `main/` you'll find `deploy/` and `java/` (aka `java/frc/robot/`). We will talk about those in the next part of this tutorial!
+
+The former (`deploy/`) contains files that will be deployed onto the robot itself along with your code.
+Obviously your code is deployed onto the robot, but sometimes you need to put some other files (like configuration files) onto the robot for your code to read.
+
+Files like that would be placed in this `deploy/` directory.
+
+It's time to go onto the next part, learning what a subsystem is!

@@ -105,6 +105,14 @@ const config: Config = {
               label: 'Introduction',
               to: '/',
             },
+            {
+              label: 'Software',
+              to: '/software'
+            },
+            {
+              label: 'Hardware',
+              to: '/hardware'
+            }
           ],
         },
         {

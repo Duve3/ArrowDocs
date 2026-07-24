@@ -1,0 +1,24 @@
+---
+sidebar_position: 3
+title: "What Is A Subsystem (and commands!)"
+---
+
+# What is A Subsystem?!?!?
+
+You've understood all these other code files, but what is this subsystem stuff?
+
+Well to simplify both the Hardware and Software aspects of making a 135 pound robot, we split it up into subsystems!
+
+A subsystem is just one part of the robot. For example, the motors controlling the driving system is part of the Drivetrain/Drivebase subsystem!
+
+<span className="subtext">the WPILib definition: "Subsystems are the basic unit of robot organization in the Command-based framework; they encapsulate low-level hardware objects (motor controllers, sensors, etc.) and provide methods through which they can be used by Commands."</span>
+
+Each subsystem is designed to be very independent, they usually just control their small set of motors and give an abstract way to control them.
+
+Let's look in our `src/main/java/frc/robot/subsystem/` directory! As you can see by default it just contains one file called: `ExampleSubsystem.java`.
+
+We can open up this subsystem and look into more on how it works!
+
+As you can see it extends [`SubsystemBase`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/SubsystemBase.html), this is the base abstract class for all subsystems to extend.
+
+Now this subsystem doesn't need to initalize anything (it doesn't control any motors) 

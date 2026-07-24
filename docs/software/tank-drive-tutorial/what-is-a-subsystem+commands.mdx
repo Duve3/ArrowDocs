@@ -21,4 +21,13 @@ We can open up this subsystem and look into more on how it works!
 
 As you can see it extends [`SubsystemBase`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/SubsystemBase.html), this is the base abstract class for all subsystems to extend.
 
-Now this subsystem doesn't need to initalize anything (it doesn't control any motors) 
+Now this subsystem doesn't need to initalize anything (it doesn't control any motors) so it has no variable definitions or any content within the constructor.
+
+We will skip over `exampleMethodCommand()` and `exampleCondition()` for now.
+
+Notice how, just like in `Robot.java` we have our own `periodic` and `simulationPeriodic` methods!
+These methods can be used for running anything you would want every 20ms or something specific during simulation every 20ms.
+
+## Commands
+
+Circling back to the methods we skipped earlier, `exampleMethodCommand()` is a method that is designed to return a [`Command`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/Command.html).
